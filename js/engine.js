@@ -37,7 +37,7 @@ var Sprites = new function() {
     this.map = sprite_data;
     this.image = new Image();
     this.image.onload = callback;
-    this.image.src = 'images/sprites.png';
+    this.image.src = 'images/sprites copy.png';
   };
 
   this.draw = function(canvas,sprite,x,y,frame) {
