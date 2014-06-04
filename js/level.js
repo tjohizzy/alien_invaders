@@ -32,7 +32,23 @@
           [0,0,1,1,1,1,1,1,1,1,0],
           [0,0,1,1,1,1,1,1,1,1,0],
           [0,0,1,1,1,1,1,1,1,1,0],
-          [0,0,1,1,1,1,1,1,1,1,0]] };
+          [0,0,1,1,1,1,1,1,1,1,0]],
+      4: [[0,0,0,0,0,0,0,0,0,0,0],
+          [0,0,0,0,1,2,2,1,0,0,0],
+          [0,0,0,2,0,0,0,0,2,0,0],
+          [0,0,1,0,0,0,0,0,0,1,0],
+          [0,2,0,0,0,0,0,0,0,0,2],
+          [0,1,2,2,2,2,2,2,2,2,1],
+          [0,1,2,2,2,2,2,2,2,2,1],
+          [0,2,1,1,1,1,1,1,1,1,2],
+          [0,2,1,1,1,1,1,1,1,1,2],
+          [0,2,1,1,1,1,1,1,1,1,2],
+          [0,2,1,1,1,1,1,1,1,1,2]],
+            
+  
+  
+  
+  };
 
   var spriteData = {
     'alien1': { sx: 0,  sy: 0,  w: 23, h: 18, cls: Alien, frames: 2 },
@@ -42,7 +58,7 @@
   }
 
   function startGame() {
-    var screen = new GameScreen("ImpossInvaders","press space to start",
+    var screen = new GameScreen("Space Invaders","press space to start",
                                  function() {
                                      Game.loadBoard(new GameBoard(1));
                                  });
@@ -68,7 +84,7 @@
   }
 
   $(function() {
-    GameAudio.load({ 'fire' : 'media/pew2.ogg', 'die' : 'media/explosion.ogg' }, 
+    GameAudio.load({ 'fire' : 'media/pew2.ogg', 'die' : 'media/blast.ogg' }, 
                    function() { 
                        Game.initialize("#gameboard", levelData, spriteData,
                                       { "start": startGame,
