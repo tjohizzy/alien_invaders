@@ -38,7 +38,7 @@
     'alien1': { sx: 0,  sy: 0,  w: 23, h: 18, cls: Alien, frames: 2 },
     'alien2': { sx: 0,  sy: 18, w: 23, h: 18, cls: Alien, frames: 2 },
     'player': { sx: 44,  sy: 53, w: 26, h: 38, cls: Player },
-    'missile': { sx: 0,  sy: 86, w: 3,  h: 14, cls: Missile }
+    'missile': { sx: 60,  sy: 91, w: 10,  h: 10, cls: Missile, frames: 2 }
   }
 
   function startGame() {
@@ -51,7 +51,7 @@
   }
 
   function endGame() {
-    var screen = new GameScreen("Game Over","(press space to restart)",
+    var screen = new GameScreen("You Lose!","(press space to restart)",
                                  function() {
                                      Game.loadBoard(new GameBoard(1));
                                  });
@@ -68,7 +68,7 @@
   }
 
   $(function() {
-    GameAudio.load({ 'fire' : 'media/pew.ogg', 'die' : 'media/explosion.ogg' }, 
+    GameAudio.load({ 'fire' : 'media/pew2.ogg', 'die' : 'media/explosion.ogg' }, 
                    function() { 
                        Game.initialize("#gameboard", levelData, spriteData,
                                       { "start": startGame,
